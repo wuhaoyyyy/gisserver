@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/java/com/who/gisserver/common/CookieUtils.java=UTF-8
+encoding//src/main/java/com/who/gisserver/common/Page.java=UTF-8
+encoding//src/main/java/com/who/gisserver/common/SpringContextHolder.java=UTF-8
+encoding//src/main/java/com/who/gisserver/common/StringUtils.java=UTF-8
+encoding//src/main/java/com/who/gisserver/controller/LoginController.java=UTF-8
+encoding//src/main/java/com/who/gisserver/dao/BaseDao.java=UTF-8
+encoding//src/main/java/com/who/gisserver/service/BaseService.java=UTF-8
+encoding//src/main/java/com/who/gisserver/service/SystemService.java=UTF-8
+encoding//src/main/webapp/home.jsp=UTF-8
+encoding//src/main/webapp/index.jsp=UTF-8
+encoding//src/main/webapp/login.jsp=UTF-8
+encoding//src/main/webapp/pages/user/manager.jsp=UTF-8

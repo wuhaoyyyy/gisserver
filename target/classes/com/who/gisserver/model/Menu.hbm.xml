@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-4-29 21:52:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Menu" table="menu" catalog="gismanager">
+        <id name="menuid" type="int">
+            <column name="menuid" />
+            <generator class="assigned" />
+        </id>
+        <property name="menuname" type="string">
+            <column name="menuname" length="50" not-null="true" />
+        </property>
+        <property name="menutype" type="string">
+            <column name="menutype" length="50" not-null="true" />
+        </property>
+        <property name="parentid" type="java.lang.Integer">
+            <column name="parentid" />
+        </property>
+        <property name="icon" type="string">
+            <column name="icon" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" />
+        </property>
+    </class>
+</hibernate-mapping>

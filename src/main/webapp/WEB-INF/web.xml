@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>g</display-name>
+
+  <!-- 激活defaultServlet来处理静态文件 -->
+  <servlet-mapping>
+	<servlet-name>default</servlet-name>
+	<url-pattern>*.jpg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+	<servlet-name>default</servlet-name>
+	<url-pattern>*.gif</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+	<servlet-name>default</servlet-name>
+	<url-pattern>*.png</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+	<servlet-name>default</servlet-name>
+	<url-pattern>*.js</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+	<servlet-name>default</servlet-name>
+	<url-pattern>*.css</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+	<servlet-name>default</servlet-name>
+	<url-pattern>*.woff</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+	<servlet-name>default</servlet-name>
+	<url-pattern>*.ttf</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+	<servlet-name>default</servlet-name>
+	<url-pattern>*.svg</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- arcgisserver 连接信息-->
+  <context-param> 
+	<param-name>arcgis_ip</param-name> 
+	<param-value>lenovo-PC</param-value> 
+  </context-param> 
+  <context-param> 
+	<param-name>arcgis_username</param-name> 
+	<param-value>arcgismanager</param-value> 
+  </context-param> 
+  <context-param> 
+	<param-name>arcgis_password</param-name> 
+	<param-value>sde</param-value> 
+  </context-param> 
+  
+  
+   <!-- 加载Spring配置文件 -->
+  <listener>
+       <listener-class>com.who.gisserver.listener.AppListener</listener-class>
+   </listener>
+  
+  
+  
+  <!-- 加载Spring配置文件 -->
+
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+		classpath*:/applicationContext.xml
+	</param-value>
+  </context-param>
+  
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>gisserver</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>gisserver</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+    
+    <welcome-file-list> <welcome-file>/login.jsp</welcome-file> </welcome-file-list>
+</web-app>

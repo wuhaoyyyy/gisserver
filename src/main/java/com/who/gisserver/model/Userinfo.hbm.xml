@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-4-29 21:52:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Userinfo" table="userinfo" catalog="gismanager">
+        <id name="userid" type="string">
+            <column name="userid" length="8" />
+            <generator class="assigned" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="50" not-null="true" />
+        </property>
+        <property name="userpsw" type="string">
+            <column name="userpsw" length="50" not-null="true" />
+        </property>
+        <property name="userrole" type="string">
+            <column name="userrole" length="8" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
